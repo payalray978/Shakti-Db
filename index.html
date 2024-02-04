@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Shakti</title>
+    <!-- <base href="./images/" /> -->
+
+    <link rel="shortcut icon" href="/images/odisha.logo.ico" type="images" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assests/style.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  </head>
+
+  <body>
+    <!-- navbar section start -->
+    <header class="header">
+      <nav class="navbar p-0 navbar-expand-lg">
+        <div class="container-fluid me-0 pe-0">
+          <a class="navbar-brand" href="javascript:void(0);"
+            ><img src="./images/mission_shakti_logo_transparent.png" alt=""
+          /></a>
+
+          <a
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </a>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand" href="javascript:void(0);"
+                  ><img
+                    src="./images/mission_shakti_logo_transparent.png"
+                    alt=""
+                /></a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body p-0">
+              <ul
+                class="navbar-nav justify-content-end gap-xl-4 gap-0 flex-grow-1 pe-3"
+              >
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Grievance</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Query</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Feedback</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Survey</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Report
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Grivence</a></li>
+                    <li><a class="dropdown-item" href="#">District </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="adminbtn">
+            <ul class="navbar-nav p-2 pe-sm-4">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-light dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="d-block">Hello,</span>Mr.Avinash
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="bi bi-box-arrow-in-right"></i> Log Out</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      ><i class="bi bi-person-check"></i> About me
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar section ends -->
+    <!-- main-section starts -->
+    <section class="main-section">
+      <div class="container-fluid">
+        <!-- Nav tabs -->
+        <ul class="nav gap-sm-2 gap-0 nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="Grievance-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#Grievance"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Grievance
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="Survey-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#Survey"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Survey
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="Query-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#Query"
+              type="button"
+              role="tab"
+              aria-controls="messages"
+              aria-selected="false"
+            >
+              Query
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div
+            class="tab-pane active"
+            id="Grievance"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+          >
+            <div class="row">
+              <div class="col-md-3 col-6 mb-sm-0">
+                <div class="custom-card card1">
+                  <div class="icon">
+                    <img src="./images/icon1.png" alt="icon1" />
+                  </div>
+                  <h5 class="data">
+                    Total Received<span class="fs-2 fw-bold d-block">115</span>
+                  </h5>
+                </div>
+              </div>
+              <div class="col-md-3 col-6 mb-sm-0">
+                <div class="custom-card card2">
+                  <div class="icon">
+                    <img src="./images/icon3.png" alt="icon1" />
+                  </div>
+                  <h5 class="data">
+                    Total Received<span class="fs-2 fw-bold d-block">115</span>
+                  </h5>
+                </div>
+              </div>
+              <div class="col-md-3 col-6 mb-sm-0">
+                <div class="custom-card card3">
+                  <div class="icon">
+                    <img src="./images/icon22.png" alt="icon1" />
+                  </div>
+                  <h5 class="data">
+                    Total Received<span class="fs-2 fw-bold d-block">115</span>
+                  </h5>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="custom-card card4">
+                  <div class="icon">
+                    <img src="./images/icon4.png" alt="icon1" />
+                  </div>
+                  <h5 class="data">
+                    Total Received<span class="fs-2 fw-bold d-block">115</span>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-lg-8 col-12 mb-lg-0 mb-4">
+                <div class="card rounded-4">
+                  <div
+                    class="card-header rounded-4 ps-4 bg-white border border-white"
+                  >
+                    <h5 class="card-title">
+                      Day - wise Grievance Status Graph
+                    </h5>
+                  </div>
+                  <div class="card-body p-2 pb-0">
+                    <figure class="highcharts-figure m-0">
+                      <div id="container"></div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-12">
+                <div class="card rounded-4">
+                  <div
+                    class="card-header rounded-4 ps-4 bg-white border border-white"
+                  >
+                    <h5 class="card-title">Grievance Performance</h5>
+                  </div>
+                  <div class="card-body pb-0 p-2">
+                    <figure class="highcharts-figure m-0">
+                      <div id="dount"></div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-12 col-12">
+                <div class="card rounded-4">
+                  <div
+                    class="card-header rounded-4 ps-4 bg-white border border-white"
+                  >
+                    <h5 class="card-title">
+                      District - wise Grievance Status Graph
+                    </h5>
+                  </div>
+                  <div class="card-body p-2 pb-0">
+                    <figure class="highcharts-figure m-0">
+                      <div id="stackedchart"></div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane"
+            id="Survey"
+            role="tabpanel"
+            aria-labelledby="Survey-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane"
+            id="Query"
+            role="tabpanel"
+            aria-labelledby="Query-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- main-section ends -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assests/script.js"></script>
+  </body>
+</html>
